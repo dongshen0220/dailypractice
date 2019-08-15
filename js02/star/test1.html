@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rate评分，带辅助文字</title>
+<style>
+	.rateWrap{
+		display: inline-block;
+		margin:100px;
+		font-size: 0;
+	}
+	.rateText{
+		display:inline-block;
+		height:22px;line-height:22px;
+		margin-left:8px;
+		font-size: 12px;
+	}
+	.rate{
+		display:inline-block;
+		--rate-size:18px;
+		--rate-padding:2px;
+	}
+	.rate>div{
+		display: inline-block;
+	}
+	.star{
+		padding: var(--rate-padding);
+		width:var(--rate-size);height:var(--rate-size);
+	}
+	
+	/* 浮动 */
+	.f-cb{
+		float: left;
+	}
+	.f-cb:after{
+		display:block;
+		clear:both;
+		overflow:hidden;
+		content:'';
+	}
+</style>
+</head>
+<body>
+	<div class='rateWrap'>
+		<div class='rate f-cb'>
+			<div><img src='img/graystar2.png' class='star' data-flag='0'></div>
+			<div><img src='img/graystar2.png' class='star' data-flag='1'></div>
+			<div><img src='img/graystar2.png' class='star' data-flag='2'></div>
+			<div><img src='img/graystar2.png' class='star' data-flag='3'></div>
+			<div><img src='img/graystar2.png' class='star' data-flag='4'></div>
+		</div>
+		<div class='rateText'></div>
+	</div>
+	
+<script>
+let addEvent = document.addEventListener ?
+	(elem,type,listener,useCapture)=>{
+		elem.addEventListener(type,listener,useCapture);
+	}	:
+	(elem,type,listener,useCapture)=>{
+		elem.attachEvent('on'+type,listener);
+	};
+let $ = selector=>{
+	return [].slice.call(document.querySelectorAll(selector));
+};
+let stars = $('.star');
+console.log(stars);
+let oRateText = $('.rateText')[0];
+let oRate = $('.rate.f-cb')[0];
+let starImg = 'img/graystar2.png';
+let starImgActive = 'img/star2.png';
+ 
+// 将事件注册到父标签上
+addEvent(oRate,'click',(ev)=>{
+    let flag = Number.parseInt(ev.target.dataset.flag);
+    console.log(flag)
+	let flagText = '';
+	switch(flag){
+		case 0:flagText='极差';break;
+		case 1:flagText='失望';break;
+		case 2:flagText='一般';break;
+		case 3:flagText='满意';break;
+		case 4:flagText='惊喜';break;
+	}
+	oRateText.innerHTML = flagText;
+	console.log('flag:',flag);
+	let preStars = stars.slice(0,flag+1);
+	console.log(preStars);
+	let sufStars = stars.slice(flag+1);
+	console.log(sufStars);
+ 
+	for(let preStar of preStars){
+        console.log(preStar);
+		preStar.src = starImgActive;
+	}
+	for(let sufStar of sufStars){
+		sufStar.src = starImg;
+	}
+});
+ 
+</script>
+</body>
+</html>

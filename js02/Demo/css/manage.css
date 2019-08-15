@@ -1,0 +1,444 @@
+.manage {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.manage .g-head {
+    overflow: hidden;
+    width: 100%;
+    height: 240px;
+    background-color: #404CF6;
+}
+
+.manage .g-head .m-top {
+    overflow: hidden;
+    width: 100%;
+    height: 72px;
+    box-sizing: border-box;
+    padding: 17px 0;
+}
+
+.manage .g-head .m-top .u-logo {
+    overflow: hidden;
+    width: 163px;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+
+.manage .g-head .m-top .u-logo span {
+    display: inline-block;
+    overflow: hidden;
+    width: 105px;
+    height: 100%;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    line-height: 38px;
+}
+
+.manage .g-head .m-top .u-nav {
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    float: left;
+    margin-left: 40px;
+}
+
+.manage .g-head .m-top .u-nav ul {
+    height: 100%;
+}
+
+.manage .g-head .m-top .u-nav li {
+    height: 100%;
+    margin: 0 30px;
+    float: left;
+}
+
+.manage .g-head .m-top .u-nav li span {
+    display: inline-block;
+    height: 100%;
+    opacity: .6;
+    font-size: 18px;
+    color: #fff;
+    line-height: 38px;
+}
+
+.manage .g-head .m-top .u-nav li span.u-on {
+    opacity: 1;
+}
+
+.manage .g-head .m-top .u-login {
+    overflow: hidden;
+    width: 255px;
+    height: 100%;
+    float: right;
+}
+
+.manage .g-head .m-top .u-login .u-alert {
+    overflow: hidden;
+    width: 20px;
+    height: 100%;
+    float: left;
+}
+
+.manage .g-head .m-top .u-login .u-user {
+    overflow: hidden;
+    width: 195px;
+    height: 100%;
+    float: right;
+    background-image: url("../img/icon03.png");
+    background-size: 18px 11px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.manage .g-head .m-top .u-login .u-user span:nth-child(1) {
+    display: inline-block;
+    overflow: hidden;
+    width: 36px;
+    height: 36px;
+    margin: 1px 0;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.manage .g-head .m-top .u-login .u-user span:nth-child(2) {
+    display: inline-block;
+    overflow: hidden;
+    width: 107px;
+    height: 100%;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 38px;
+}
+
+.manage .g-head .m-bottom {
+    overflow: hidden;
+    width: 100%;
+    height: 168px;
+    box-sizing: border-box;
+    padding: 49px 0;
+}
+
+.manage .g-head .m-bottom .u-nav, .manage .g-head .m-bottom .u-nav ul {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.manage .g-head .m-bottom .u-nav li {
+    position: relative;
+    width: auto;
+    height: 70px;
+    box-sizing: border-box;
+    padding: 25px 13px 25px 12px;
+    margin-right: 42px;
+    float: left;
+    border-radius: 10px;
+    background-color: #C8CBFF;
+}
+
+.manage .g-head .m-bottom .u-nav li span {
+    font-size: 14px;
+    color: #404CF6;
+}
+
+.manage .g-head .m-bottom .u-nav li:after {
+    content: '';
+    position: absolute;
+    top: 23px;
+    right: -36px;
+    width: 30px;
+    height: 24px;
+    background-image: url("../img/icon02.png");
+}
+
+.manage .g-head .m-bottom .u-nav li:last-child {
+    margin: 0;
+}
+
+.manage .g-head .m-bottom .u-nav li:last-child:after {
+    width: 0;
+    height: 0;
+    background: none;
+}
+
+.manage .g-head .m-bottom .u-nav li.u-main {
+    padding: 19px 28px 18px 26px;
+    margin-right: 46px;
+    background-color: #fff;
+}
+
+.manage .g-head .m-bottom .u-nav li.u-main:after {
+    content: '';
+    right: -40px;
+}
+
+.manage .g-head .m-bottom .u-nav li.u-main span {
+    font-size: 24px;
+}
+
+.manage .g-head .m-bottom .u-nav li.u-minor {
+    background-color: #D9D9D9;
+}
+
+.manage .g-head .m-bottom .u-nav li.u-minor span {
+    color: #666;
+}
+
+.manage .g-head .m-bottom .u-nav li.u-done:before {
+    content: '';
+    position: absolute;
+    top: -9.5px;
+    right: -16px;
+    width: 89px;
+    height: 89px;
+    background-image: url("../img/icon01.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.manage .g-body {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 30px 0 50px 0;
+    background-color: #f4f4f4;
+}
+
+.manage .g-body .m-center {
+    border-radius: 8px;
+}
+
+.manage .g-body .m-tit {
+    overflow: hidden;
+    width: 100%;
+    height: 61px;
+    box-sizing: border-box;
+    padding: 18px 30px 17px 30px;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: #fff;
+}
+
+.manage .g-body .m-tit span {
+    font-size: 18px;
+    color: #333;
+}
+
+.manage .g-body .m-con {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.manage .g-body .m-con .m-tit {
+    height: 187px;
+    padding: 28px 30px 29px 30px;
+    border: none;
+}
+
+.manage .g-body .m-con .m-tit .m-left {
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    float: left;
+}
+
+.manage .g-body .m-con .m-tit .m-left .u-head img {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.manage .g-body .m-con .m-tit .m-right {
+    overflow: hidden;
+    width: 696px;
+    height: 100%;
+    margin-left: 40px;
+    float: left;
+}
+
+.manage .g-body .m-con .m-tit .m-right .u-top {
+    width: auto;
+    height: 28px;
+}
+
+.manage .g-body .m-con .m-tit .m-right .u-top span {
+    font-size: 20px;
+    color: #404CF6;
+}
+
+.manage .g-body .m-con .m-tit .m-right .u-middle {
+    height: 33px;
+    margin: 10px 0;
+}
+
+.manage .g-body .m-con .m-tit .m-right .u-middle span {
+    font-size: 24px;
+    color: #222;
+}
+
+.manage .g-body .m-con .m-tit .m-right .u-bottom {
+    height: 44px;
+}
+
+.manage .g-body .m-con .m-tit .m-right .u-bottom span {
+    font-size: 16px;
+    color: #999;
+}
+
+.manage .g-body .m-con .m-list {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 30px 29px 30px;
+    background-color: #fff;
+}
+
+.manage .g-body .m-con .m-list .u-item {
+    overflow: hidden;
+    width: 100%;
+    height: 59px;
+    box-sizing: border-box;
+    border-top: 1px dashed #ccc;
+}
+
+.manage .g-body .m-con .m-list .u-item:last-child {
+    border-bottom: 1px dashed #ccc;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column {
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(1) {
+    padding: 20px 0;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(1) span:nth-child(1) {
+    display: inline-block;
+    overflow: hidden;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #ededed;
+    font-size: 12px;
+    color: #404CF6;
+    text-align: center;
+    line-height: 18px;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(1) span:nth-child(2) {
+    display: inline-block;
+    overflow: hidden;
+    height: 18px;
+    font-size: 14px;
+    color: #333;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(2) {
+    padding: 19px 0;
+    margin-left: 171px;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(2) .u-progress {
+    overflow: hidden;
+    width: 240px;
+    height: 16px;
+    margin: 2px 0;
+    border-radius: 7px;
+    float: left;
+    background-color: #EDEEFE;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(2) .u-progress span {
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 7px;
+    background-color: #404CF6;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(2) .u-con {
+    overflow: hidden;
+    width: 79px;
+    height: 20px;
+    margin-left: 11px;
+    float: left;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(2) .u-con span {
+    font-size: 14px;
+    color: #151515;
+    line-height: 20px;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(2) .u-con span b {
+    font-weight: normal;
+    color: #404CF6;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(3) {
+    padding: 19px 0;
+    margin-left: 167px;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(3) span {
+    display: inline-block;
+    width: 190px;
+    height: 20px;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(3) span b {
+    color: #404CF6;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(4) {
+    padding: 19px 0;
+    margin-left: 119px;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(4) span {
+    font-size: 14px;
+    color: #999;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(4).u-success span {
+    color: #1FAD66;
+}
+
+.manage .g-body .m-con .m-list .u-item .u-column:nth-child(4).u-no span {
+    color: #FF9500;
+}
+
+.manage .g-foot {
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+}
+
+.manage .g-foot span {
+    display: block;
+    width: 473px;
+    height: 100%;
+    margin: 30px auto;
+    font-size: 14px;
+    color: #fff;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>小星星星星星星啊</title>
+</head>
+
+<body class="index">
+    <div class="g-main">
+        <div>
+           
+        <div>
+            <span>disable：false</span>
+            <div id="star1" class="u-star"></div>
+        </div>
+        <div>
+            <span>disable：true</span>
+            <div id="star2" class="u-star">
+                <!-- <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul> -->
+            </div>
+        </div>
+        <div>
+            <span>half star disable：false</span>
+            <div id="star3" class="u-star"></div>
+        </div>
+        <div>
+            <span>half star  disable：true</span>
+            <div id="star4" class="u-star"></div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $('#star1').star({
+            defaultValue: 3,
+            onChange: function (value) {
+                console.log("star:" + value)
+            },
+            // style：{},
+            // disable: true
+        });
+        $('#star2').star({
+            defaultValue: 3,
+            // onChange: function (value) {
+            //     console.log("star:" + value)
+            // },
+            // style：{},
+            disable: true
+        });
+        $('#star3').star({
+            defaultValue: 3.5,
+            onChange: function (value) {
+                console.log("star:" + value)
+            },
+            // style：{},
+            // disable: true
+            allowHalf:true
+        });
+        $('#star4').star({
+            defaultValue: 0.5,
+            // onChange: function (value) {
+            //     console.log("star:" + value)
+            // },
+            // style：{},
+            disable: true,
+            allowHalf:true
+        });
+    </script>
+</body>
+
+</html>

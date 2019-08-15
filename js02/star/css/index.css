@@ -1,0 +1,70 @@
+.index{
+	margin: 0;
+	width: 100%;
+}
+.index .g-main {
+    overflow: hidden;
+}
+/* test start */
+/* .index .g-main .u-star ul {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+.index .g-main .u-star ul li {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    padding: 2px;
+    background: url("../img/graystar2.png") no-repeat center center;
+    background-size: 24px 24px;
+}
+.index .g-main .u-star .s1 {
+    background: url("../img/graystar2.png") no-repeat center center;
+    background-size: 24px 24px;
+}
+.index .g-main .u-star .s2 {
+    background: url("../img/star2.png") no-repeat center center;
+    background-size: 24px 24px;
+}
+.index .g-main .u-star .s3 {
+    background: url("../img/halfstar2.png") no-repeat center center;
+    background-size: 24px 24px;
+} */
+/* test end  */
+.index .g-main .u-star .u-ul {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+.index .g-main .u-star .u-li{
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    background: url("../img/graystar2.png") no-repeat center center;
+    background-size: 24px 24px;
+}
+.index .g-main .u-star .u-half-li{
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    background: url("../img/graystar2.png") no-repeat center center;
+    background-size: 24px 24px;
+}
+.index .g-main .u-star .z-selected {
+    background: url("../img/star2.png") no-repeat center center;
+    background-size: 24px 24px;
+}
+.index .g-main .u-star .z-half-selected {
+    background: url("../img/halfstar2.png") no-repeat center center;
+    background-size: 24px 24px;
+}
+
