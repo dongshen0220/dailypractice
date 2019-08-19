@@ -1,0 +1,81 @@
+<!--
+ * @Description: 
+ * @Author: dongshen
+ * @Date: 2019-08-19 15:52:20
+ * @LastEditors: dongshen
+ * @LastEditTime: 2019-08-19 16:37:40
+ -->
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>css</title>
+    <style>
+        /* 红色区域的大小是多少？ */
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            margin: 20px;
+            background: red;
+            border: 20px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script type="text/javascript">
+        // setTimeout(() => {
+        //     console.log(1)
+        // }, 0)
+        // Promise.resolve().then(() => {
+        //     console.log(2)
+        // })
+        // console.log(3)
+        // ---------------------------
+        // setTimeout(() => {
+        //     console.log(1)
+        // }, 0)
+        // let a = new Promise((resolve) => {
+        //     console.log(2)
+        //     resolve()
+        // }).then(() => {
+        //     console.log(3)
+        // }).then(() => {
+        //     console.log(4)
+        // })
+        // console.log(5)
+        // ---------------------------
+        async function async1() {
+            console.log("async1 start");
+            await async2();
+            console.log("async1 end");
+        }
+        async function async2() {
+            console.log('async2');
+        }
+        // 用于test的promise，看看await究竟在何时执行
+        new Promise(function(resolve) {
+            console.log("promise1");
+            resolve();
+        }).then(function() {
+            console.log("promise2");
+        }).then(function() {
+            console.log("promise3");
+        }).then(function() {
+            console.log("promise4");
+        }).then(function() {
+            console.log("promise5");
+        });
+
+
+        window.onload = function() {}
+    </script>
+</body>
+
+</html>
