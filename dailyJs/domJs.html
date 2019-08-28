@@ -3,7 +3,7 @@
  * @Author: dongshen
  * @Date: 2019-08-17 11:12:40
  * @LastEditors: dongshen
- * @LastEditTime: 2019-08-27 22:31:47
+ * @LastEditTime: 2019-08-28 15:07:38
  -->
 <!DOCTYPE html>
 <html>
@@ -85,61 +85,77 @@
         person.sayHi();
         person.sayHi;
 
-        new Promise((resolve, reject) => {
-            console.log("promise1")
-            resolve()
-        }).then(() => {
-            console.log("then11")
-            new Promise((resolve, reject) => {
-                console.log("promise2")
-                resolve()
-            }).then(() => {
-                console.log("then21")
-            }).then(() => {
-                console.log("then23")
-            })
-        }).then(() => {
-            console.log("then12")
-        })
+        // new Promise((resolve, reject) => {
+        //     console.log("promise1")
+        //     resolve()
+        // }).then(() => {
+        //     console.log("then11")
+        //     new Promise((resolve, reject) => {
+        //         console.log("promise2")
+        //         resolve()
+        //     }).then(() => {
+        //         console.log("then21")
+        //     }).then(() => {
+        //         console.log("then23")
+        //     })
+        // }).then(() => {
+        //     console.log("then12")
+        // })
 
 
         // 初始化计数器
         // var counter = 0;
 
         // 递增计数器的函数
-        function add() {
-            var counter = 0;
-            counter += 1;
-            console.log(counter)
-            return counter
-        }
+        // function add() {
+        //     var counter = 0;
+        //     counter += 1;
+        //     console.log(counter)
+        //     return counter
+        // }
 
         // 调用三次 add()
-        add();
-        add();
-        add();
+        // add();
+        // add();
+        // add();
 
-        function add1() {
-            var counter = 0;
+        // function add1() {
+        //     var counter = 0;
 
-            function plus() {
-                counter += 1;
+        //     function plus() {
+        //         counter += 1;
+        //     }
+        //     plus();
+        //     console.log(counter)
+        //     return counter;
+        // }
+        // add1();
+        // add1();
+        // add1();
+
+        // for (var i = 1; i <= 5; i++) {
+        //     (function(j) {
+        //         setTimeout(function timer() {
+        //             console.log(j);
+        //         }, j * 1000);
+        //     })(i);
+        // }
+
+        function fun(n, o) {
+            console.log(o);
+            return {
+                fun: function(m) {
+                    return fun(m, n);
+                }
             }
-            plus();
-            console.log(counter)
-            return counter;
         }
-        add1();
-        add1();
-        add1();
-
-        for (var i = 1; i <= 5; i++) {
-            (function(j) {
-                setTimeout(function timer() {
-                    console.log(j);
-                }, j * 1000);
-            })(i);
-        }
+        fun(0).fun(1).fun(2);
+        console.log(fun(0).fun(1).fun(2));
+        let fn = fun(0).fun(1).fun;
+        fn(2);
+        console.log(fn(2));
+        fn(3);
+        console.log(fn(3));
     </script>
 </body>
 

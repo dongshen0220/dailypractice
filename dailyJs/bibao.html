@@ -1,0 +1,56 @@
+<!--
+ * @Description: 
+ * @Author: dongshen
+ * @Date: 2019-08-28 15:29:06
+ * @LastEditors: dongshen
+ * @LastEditTime: 2019-08-28 15:30:37
+ -->
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>dom操作</title>
+</head>
+
+<body>
+    <p id="test"></p>
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script type="text/javascript">
+        //普通对象 的 一个方法
+        var person = {
+            name: "double",
+            getName: function() {
+                console.log(this.name)
+            }
+        }
+        person.getName() //double
+
+        //普通对象方法返回的是匿名函数
+        var person = {
+            name: "double",
+            getName: function() {
+                return function() {
+                    console.log(this.name)
+                }
+            }
+        }
+        var name = "single"
+        person.getName()() //single
+
+        //普通对象方法返回的是匿名函数
+        var person = {
+            name: "double",
+            getName: function() {
+                var that = this //在定义匿名函数前将this对象赋予给that的变量  this和arguments差不多，也要将其赋值给某个变量
+                return function() {
+                    console.log(that.name)
+                }
+            }
+        }
+        var name = "single"
+        person.getName()() //double
+    </script>
+</body>
+
+</html>
