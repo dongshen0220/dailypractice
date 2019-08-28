@@ -3,7 +3,7 @@
  * @Author: dongshen
  * @Date: 2019-08-28 15:29:06
  * @LastEditors: dongshen
- * @LastEditTime: 2019-08-28 15:30:37
+ * @LastEditTime: 2019-08-28 15:51:51
  -->
 <!DOCTYPE html>
 <html>
@@ -50,6 +50,38 @@
         }
         var name = "single"
         person.getName()() //double
+
+
+        // 创建10个<a>标签，点击时候弹出相应的序号
+        var i
+        for (i = 0; i < 10; i++) {
+            (function(i) {
+                var a = document.createElement('a')
+                a.innerHTML = i + '<br>'
+                a.addEventListener('click', function(event) {
+                    var event = event || window.event
+                    event.preventDefault()
+                    alert(i) //去父作用域查找         
+                })
+                document.body.appendChild(a)
+            })(i)
+        }
+        // 闭包的实际运用：判断一个数字是否出现过
+        function isFirst() {
+            var _list = [];
+            return function(id) {
+                if (_list.indexOf(id) >= 0) {
+                    return false;
+                } else {
+                    _list.push(id);
+                    return true;
+                }
+            };
+        }
+        var first = isFirst();
+        first(10);
+        first(10);
+        first(20);
     </script>
 </body>
 
