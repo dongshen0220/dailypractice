@@ -3,7 +3,7 @@
  * @Author: dongshen
  * @Date: 2019-08-17 11:12:40
  * @LastEditors: dongshen
- * @LastEditTime: 2019-08-19 13:24:39
+ * @LastEditTime: 2019-08-27 22:31:47
  -->
 <!DOCTYPE html>
 <html>
@@ -19,6 +19,127 @@
     <script type="text/javascript">
         document.getElementById('test').innerHTML = "helloword";
         window.onload = function() {}
+            // console.log(typeof NaN)
+            // var demo1 = new Object();
+            // demo1.name = "lyl";
+            // var demo2 = demo1;
+            // demo2.name = "lmz";
+            // console.log(demo1.name);
+            // console.log(["1", "2", "3"].map(parseInt));
+            // -----------------------
+            // var number = 5;
+            // var obj = {
+            //     number: 3,
+            //     fn1: (function() {
+            //         var number;
+            //         this.number *= 2;
+            //         number = number * 2;
+            //         number = 3;
+            //         return function() {
+            //             var num = this.number;
+            //             this.number *= 2;
+            //             console.log(num);
+            //             number *= 3;
+            //             console.log(number);
+            //         }
+            //     })()
+            // }
+            // var fn1 = obj.fn1;
+            // fn1.call(null);
+            // obj.fn1();
+            // console.log(window.number);
+            // -----------------------
+        var obj = {
+            hi: function() {
+                console.log(this);
+                return () => {
+                    console.log(this);
+                }
+            },
+            sayHi: function() {
+                return function() {
+                    console.log(this);
+                    return () => {
+                        console.log(this);
+                    }
+                }
+            },
+            say: () => {
+                console.log(this);
+            }
+        }
+        let hi = obj.hi(); //输出obj对象
+        hi(); //输出obj对象
+        // let sayHi = obj.sayHi();
+        // let fun1 = sayHi(); //输出window
+        // fun1(); //输出window
+        // obj.say(); //输出window
+        function sayHi() {
+            console.log('Hello,', this.name);
+        }
+        var person = {
+            name: 'YvetteLau',
+            sayHi: sayHi
+        }
+        var name = 'Wiliam';
+        person.sayHi();
+        person.sayHi;
+
+        new Promise((resolve, reject) => {
+            console.log("promise1")
+            resolve()
+        }).then(() => {
+            console.log("then11")
+            new Promise((resolve, reject) => {
+                console.log("promise2")
+                resolve()
+            }).then(() => {
+                console.log("then21")
+            }).then(() => {
+                console.log("then23")
+            })
+        }).then(() => {
+            console.log("then12")
+        })
+
+
+        // 初始化计数器
+        // var counter = 0;
+
+        // 递增计数器的函数
+        function add() {
+            var counter = 0;
+            counter += 1;
+            console.log(counter)
+            return counter
+        }
+
+        // 调用三次 add()
+        add();
+        add();
+        add();
+
+        function add1() {
+            var counter = 0;
+
+            function plus() {
+                counter += 1;
+            }
+            plus();
+            console.log(counter)
+            return counter;
+        }
+        add1();
+        add1();
+        add1();
+
+        for (var i = 1; i <= 5; i++) {
+            (function(j) {
+                setTimeout(function timer() {
+                    console.log(j);
+                }, j * 1000);
+            })(i);
+        }
     </script>
 </body>
 
