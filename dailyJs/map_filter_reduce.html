@@ -1,0 +1,75 @@
+<!--
+ * @Description: 
+ * @Author: dongshen
+ * @Date: 2019-09-01 13:59:50
+ * @LastEditors: dongshen
+ * @LastEditTime: 2019-09-01 22:46:35
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>map_filter_reduce</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        var array1 = [1, 4, 9, 16];
+        const map1 = array1.map(x => x * 2);
+
+        console.log(array1); // [1,4,9,16]
+        console.log(map1); // [2,8,18,32]
+
+        // 过滤不符合的项
+        var arr = [20, 30, 50, 96, 50]
+        var newArr = arr.filter(item => item > 40)
+
+        console.log(arr) // [20,30,50, 96,50]
+        console.log(newArr) // [50, 96, 50]
+
+        // 去掉数组中的 空字符串、0、undefined、null；
+        var arr = ['1', '2', null, '3.jpg', null, 0]
+        var newArr = arr.filter(item => item)
+            // 也可以写成
+            // var newArr = arr.filter(Boolean);
+        console.log(newArr) // ["1", "2", "3.jpg"]
+
+        // 统计字符串中每个字符出现的次数
+        // Array.from() 方法从一个类似数组或可迭代的对象
+        //(包括 Array，Map，Set，String，TypedArray，arguments 对象等等) 中创建一个新的数组实例
+        const str = '9kFZTQLbUWOjurz9IKRdeg28rYxULHWDUrIHxCY6tnHleoJ'
+        const obj = {}
+        Array.from(str).reduce((accumulator, current) => {
+            current in accumulator ? accumulator[current]++ : accumulator[current] = 1
+            return accumulator;
+        }, obj)
+
+        // 非 reduce 的写法是
+        const str = '9kFZTQLbUWOjurz9IKRdeg28rYxULHWDUrIHxCY6tnHleoJ'
+        const obj = {}
+        str.split('').forEach(item => {
+            obj[item] ? obj[item]++ : obj[item] = 1
+        })
+
+
+        // 数组去重 
+        // 1.set
+        function unique(arr) {
+            //通过Set对象，对数组去重，结果又返回一个Set对象
+            //通过from方法，将Set对象转为数组
+            return Array.from(new Set(arr))
+        }
+        // 2. indexOf array == -1
+        // 3.filter
+        arr = ['a', 'b', 'c', 'a'];
+        let arr2 = arr.filter((item, index, self) => {
+            return self.indexOf(item) == index;
+        });
+        console.log(arr2);
+    </script>
+</body>
+
+</html>

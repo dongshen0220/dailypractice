@@ -1,0 +1,66 @@
+<!--
+ * @Description: 
+ * @Author: dongshen
+ * @Date: 2019-09-01 15:20:18
+ * @LastEditors: dongshen
+ * @LastEditTime: 2019-09-01 16:58:14
+ -->
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>双飞翼布局t</title>
+    <style>
+        /* .container {
+            
+            padding: 0 200px;
+        } */
+        
+        .container>div {
+            height: 200px;
+            float: left;
+        }
+        
+        .middle {
+            width: 100%;
+            background: blue;
+        }
+        
+        .middle_container {
+            /* 添加 .middle-container 包裹内容 */
+            height: 200px;
+            margin: 0 200px;
+            background: darkred;
+        }
+        
+        a:hover {
+            transition: all 0.5s ease-out;
+        }
+        
+        .left {
+            margin-left: -200px;
+            width: 200px;
+            background: red;
+        }
+        
+        .right {
+            margin-left: -200px;
+            width: 200px;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="middle">
+            <div class="middle_container">
+                <a href="www.baidu.com">testTransition</a>
+            </div>
+        </div>
+        <!-- 因为要先渲染 .middle，所以 .middle 一定要写在第一个 -->
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>

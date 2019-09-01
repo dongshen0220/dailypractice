@@ -1,0 +1,59 @@
+<!--
+ * @Description: 
+ * @Author: dongshen
+ * @Date: 2019-09-01 15:20:18
+ * @LastEditors: dongshen
+ * @LastEditTime: 2019-09-01 15:27:10
+ -->
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>圣杯布局 Holy Grail Layout</title>
+    <style>
+        .container {
+            /* 压缩左右内边距，留出 .left 和 .right 的距离 */
+            padding: 0 200px;
+        }
+        
+        .container>div {
+            height: 200px;
+            float: left;
+        }
+        
+        .middle {
+            width: 100%;
+            background: blue;
+        }
+        
+        .left {
+            margin-left: -100%;
+            /* 用 -100% 吃掉 .middle 的宽度 */
+            position: relative;
+            /* 相对 .container -200px */
+            left: -200px;
+            width: 200px;
+            background: red;
+        }
+        
+        .right {
+            margin-left: -200px;
+            /* 用 -200px 吃掉 .right 自己的宽度 */
+            position: relative;
+            /* 相对 .container -200px */
+            right: -200px;
+            width: 200px;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="middle"></div>
+        <!-- 因为要先渲染 .middle，所以 .middle 一定要写在第一个 -->
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
